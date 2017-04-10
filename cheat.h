@@ -719,7 +719,7 @@ Builds a formatted string or
 fails safely in case the amount of conversion specifiers in
 the format string does not match the expected count.
 */
-__attribute__ ((__format__ (__printf__, 1, 4), __nonnull__ (1)))
+__attribute__ ((__format__ (__printf__, 2, 4), __nonnull__ (1)))
 static int cheat_print_string(char* const destination,
 		char const* const format,
 		size_t const count, ...) {
