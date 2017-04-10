@@ -1,0 +1,5 @@
+Name: cheat
+Description: CHEAT
+Version: 1.0.3
+Libs: -lm
+Cflags: -I.
