@@ -277,20 +277,20 @@ CHEAT_GENERATE_INTEGER(long_long_unsigned_int, long long unsigned int, "%llu")
 CHEAT_GENERATE_FLOATING(float, float, fabsf, "%hg")
 CHEAT_GENERATE_FLOATING(long_double, long double, fabsl, "%lg")
 
-#define cheat_assert_float(actual, expected) \
-	cheat_check_float(&cheat_suite, false, actual, expected, \
+#define cheat_assert_float(actual, expected, tolerance) \
+	cheat_check_float(&cheat_suite, false, tolerance, actual, expected, \
 		__FILE__, __LINE__)
 
-#define cheat_assert_not_float(actual, expected) \
-	cheat_check_float(&cheat_suite, true, actual, expected, \
+#define cheat_assert_not_float(actual, expected, tolerance) \
+	cheat_check_float(&cheat_suite, true, tolerance, actual, expected, \
 		__FILE__, __LINE__)
 
-#define cheat_assert_long_double(actual, expected) \
-	cheat_check_long_double(&cheat_suite, false, actual, expected, \
+#define cheat_assert_long_double(actual, expected, tolerance) \
+	cheat_check_long_double(&cheat_suite, false, tolerance, actual, expected, \
 		__FILE__, __LINE__)
 
-#define cheat_assert_not_long_double(actual, expected) \
-	cheat_check_long_double(&cheat_suite, true, actual, expected, \
+#define cheat_assert_not_long_double(actual, expected, tolerance) \
+	cheat_check_long_double(&cheat_suite, true, tolerance, actual, expected, \
 		__FILE__, __LINE__)
 
 #endif
